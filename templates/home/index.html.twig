@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .btn{ width:300px }
+    .link { text-decoration: none; color: #777777; font-size: 16px;}
+</style>
+
+<div class="example-wrapper">
+    <h1 class="text-center mb-5">Launch Your App</h1>
+    <div class="d-flex justify-content-center mb-5">
+        <img height="300" src={{asset('images/rocket.png')}} alt='cohete'/>
+    </div>
+    <div class="d-flex justify-content-center mb-2">
+        <a class="btn btn-info" href = {{ path('create_user', {}, relative = true) }}>Create</a>
+    </div>
+    <div class="d-flex justify-content-center mb-3">
+        <a class="btn btn-warning" href = {{ path('login_user', {}, relative = true) }}>Login</a>
+    </div>
+    <div class="d-flex justify-content-center">
+        <a class="text-center link" href = #>Terms and conditions</a>
+    </div>
+</div>
+{% endblock %}

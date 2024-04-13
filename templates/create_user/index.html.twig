@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Create Account{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    #user_submit {width:100%; color: #000; background-color: var(--bs-info); border-color: var(--bs-info);}
+</style>
+
+<div class="example-wrapper">
+    <h1 class="text-center mb-5">Create Account</h1>
+    <div class="d-flex justify-content-center mb-5">
+        <img src={{asset('images/rocket2.png')}} height="300" alt='cohete'/>
+    </div>
+    {% if action == 1 %}
+    <div class="alert alert-success" role="alert">
+    El nuevo usuario ha sido creado con exito
+    </div>
+    {% endif %}
+    {{form(formulario)}}
+</div>
+{% endblock %}
